@@ -26,7 +26,7 @@ class ImpMod(loader.Module):
             imps = ['не был предателем', 'оказался одним из предателей']
             text2 = f"\n{remain} предател{'я' if remain == 2 else 'ь'} остался."
 
-        await message.client.send_message(message.chat.id, "{AmonGus} 🟡Секунду...")
+        await message.client.send_message(message.chat.id, "[AmonGus] 🟡Секунду...")
         background = requests.get(f"https://fl1yd.su/modules/stuff/impostor{randint(1,22)}.png").content
         font = requests.get("https://fl1yd.su/modules/stuff/font2.ttf").content
         
