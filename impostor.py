@@ -10,12 +10,10 @@ class ImpMod(loader.Module):
 
     async def impcmd(self, message):
         """Используй: .imp <@ или текст или реплай>."""
-        await message.client.send_message("[AmonGus] Секунду...")
         await self.procces_img(message, "en")
 
     async def ruimpcmd(self, message):
         """Используй: .ruimp <@ или текст или реплай>."""
-        await message.client.send_message("[AmonGus] Секунду...")
         await self.procces_img(message, "ru")
 
 
@@ -28,6 +26,7 @@ class ImpMod(loader.Module):
             imps = ['не был предателем', 'оказался одним из предателей']
             text2 = f"\n{remain} предател{'я' if remain == 2 else 'ь'} остался."
 
+        await message.client.send_message(message.chat.id, "{AmonGus} 🟡Секунду...")
         background = requests.get(f"https://fl1yd.su/modules/stuff/impostor{randint(1,22)}.png").content
         font = requests.get("https://fl1yd.su/modules/stuff/font2.ttf").content
         
