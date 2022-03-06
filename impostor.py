@@ -11,10 +11,12 @@ class ImpMod(loader.Module):
     async def impcmd(self, message):
         """Используй: .imp <@ или текст или реплай>."""
         await self.procces_img(message, "en")
+        await message.client.send_message("[AmonGus] Секунду...")
 
     async def ruimpcmd(self, message):
         """Используй: .ruimp <@ или текст или реплай>."""
         await self.procces_img(message, "ru")
+        await message.client.send_message("[AmonGus] Секунду...")
 
 
     async def procces_img(self, message, way):
@@ -29,7 +31,6 @@ class ImpMod(loader.Module):
         background = requests.get(f"https://fl1yd.su/modules/stuff/impostor{randint(1,22)}.png").content
         font = requests.get("https://fl1yd.su/modules/stuff/font2.ttf").content
         
-        await message.client.send_message("[AmonGus] Секунду...")
         reply = await message.get_reply_message()
         args = utils.get_args_raw(message)
         
