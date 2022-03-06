@@ -29,7 +29,7 @@ class ImpMod(loader.Module):
         background = requests.get(f"https://fl1yd.su/modules/stuff/impostor{randint(1,22)}.png").content
         font = requests.get("https://fl1yd.su/modules/stuff/font2.ttf").content
         
-        await message.edit("[AmonGus] Секунду...")
+        await message.client.send_message("[AmonGus] Секунду...")
         reply = await message.get_reply_message()
         args = utils.get_args_raw(message)
         
